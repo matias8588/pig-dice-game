@@ -37,7 +37,7 @@ body {
 
 .player-0-panel,
 .player-1-panel {
-  padding: 100px;
+  padding: 50px;
 }
 
 /**********************************************
@@ -171,7 +171,7 @@ i {
 @media (max-width: 768px) {
   .player-0-panel,
   .player-1-panel {
-    padding: 50px;
+    padding: 70px;
   }
   .player-name {
     font-size: 30px;
@@ -190,7 +190,7 @@ i {
 @media (max-width: 425px) {
   .player-0-panel,
   .player-1-panel {
-    padding: 30px;
+    padding: 70px;
   }
   .player-name {
     font-size: 20px;
@@ -202,8 +202,17 @@ i {
   }
   .btn-roll {
     top: 303px;
+    left: 35vw;
   }
   .btn-hold {
     top: 367px;
+    left: 35vw;
+  }
+  .dice {
+    left: 80%;
+    top: 40vh;
+  }
+  .active .player-name::after {
+    top: -25px;
   }
 }
