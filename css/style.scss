@@ -26,21 +26,21 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    padding-top: 1%;
     overflow: hidden;
+}
+
+.col {
+    background-color: white;
+    margin: 0%;
+    padding: 0%
 }
 
 .player-0-panel,
 .player-1-panel {
-    width: 50%;
-    float: left;
-    height: 600px;
+    // width: 50%;
+    // float: left;
+    // height: 600px;
     padding: 100px;
 }
 
@@ -69,8 +69,13 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+.active {
+    background-color: #e4e1e1;
+}
+
+.active .player-name {
+    font-weight: 300;
+}
 
 .active .player-name::after {
     content: "\2022";
@@ -79,7 +84,7 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
+
 }
 
 .player-current-box {
@@ -118,8 +123,13 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
 
 button:focus {
     outline: none;
@@ -136,9 +146,17 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 403px;
+}
+
+.btn-hold {
+    top: 467px;
+}
 
 .dice {
     position: absolute;
@@ -149,5 +167,66 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
+
+@media (max-width: 768px) {
+
+    .player-0-panel,
+    .player-1-panel {
+        padding: 50px
+    }
+
+    .player-name {
+        font-size: 30px
+    }
+
+    .player-score {
+        margin-bottom: 65px
+    }
+
+    .btn-roll {
+        top: 303px
+    }
+
+    .btn-hold {
+        top: 367px
+    }
+}
+
+@media (max-width: 425px) {
+
+    .player-0-panel,
+    .player-1-panel {
+        padding: 30px
+    }
+
+    .player-name {
+        font-size: 20px;
+        margin-top:5px;
+    }
+
+    .player-score {
+        margin-bottom: 0px;
+        font-size: 40px;
+        
+    }
+
+    .btn-roll {
+        top: 303px
+    }
+
+    .btn-hold {
+        top: 367px
+    }
+}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
