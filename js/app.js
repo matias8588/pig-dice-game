@@ -10,16 +10,10 @@ GAME RULES:
 */
 
 /* Declaración de variables */
-var scores = [0, 0]
-var roundScore = 0
-var activePlayer = 0
+var scores, roundScore, activePlayer
 
-/* Inicializo los valores en 0 */
-document.getElementById('score-0').textContent = '0'
-document.getElementById('score-1').textContent = '0'
-document.getElementById('current-0').textContent = '0'
-document.getElementById('current-1').textContent = '0'
-document.querySelector('.dice').style.display = 'none'
+/* Inicio la app */
+init()
 
 /* Evento para crear un numero random al hacer click */
 document.querySelector('.btn-roll').addEventListener('click', function () {
@@ -49,6 +43,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
   }
 })
 
+document.querySelector('.btn-new').addEventListener('click', init)
+
 /* Funcion para pasar al siguente jugador */
 function nextPlayer () {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0
@@ -58,4 +54,23 @@ function nextPlayer () {
   document.querySelector('.player-0-panel').classList.toggle('active')
   document.querySelector('.player-1-panel').classList.toggle('active')
   document.querySelector('.dice').style.display = 'none'
+}
+
+/* Funcion para inicializar los resultados en 0 */
+function init () {
+  scores = [0, 0]
+  activePlayer = 0
+  roundScore = 0
+  document.getElementById('score-0').textContent = '0'
+  document.getElementById('score-1').textContent = '0'
+  document.getElementById('current-0').textContent = '0'
+  document.getElementById('current-1').textContent = '0'
+  document.querySelector('.dice').style.display = 'none'
+  document.getElementById('name-0').textContent = 'Jugador 1'
+  document.getElementById('name-1').textContent = 'Jugador 2'
+  document.querySelector('.player-0-panel').classList.remove('winner')
+  document.querySelector('.player-1-panel').classList.remove('winner')
+  document.querySelector('.player-0-panel').classList.remove('active')
+  document.querySelector('.player-1-panel').classList.remove('active')
+  document.querySelector('.player-0-panel').classList.add('active')
 }
