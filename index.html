@@ -23,70 +23,63 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/introStyle.min.css">
     <meta name="theme-color" content="#ffffff">
     <title>Pig Game</title>
 </head>
 
 <body>
-
-    <!-- <div class="wrapper clearfix">
-        <div class="player-0-panel active">
-            <div class="player-name" id="name-0">Jugador 1</div>
-            <div class="player-score" id="score-0">43</div>
-            <div class="player-current-box">
-                <div class="player-current-label">Actual</div>
-                <div class="player-current-score" id="current-0">11</div>
-            </div>
+    <div class="container animated fadeIn">
+        <div class="row">
+            <h1>Bienvenid@ a Pig Game</h1>
         </div>
-
-        <div class="player-1-panel">
-            <div class="player-name" id="name-1">Jugador 2</div>
-            <div class="player-score" id="score-1">72</div>
-            <div class="player-current-box">
-                <div class="player-current-label">Actual</div>
-                <div class="player-current-score" id="current-1">0</div>
-            </div>
-        </div>
-
-        <button class="btn-new"><i class="ion-ios-plus-outline"></i>Juego nuevo</button>
-        <button class="btn-roll"><i class="ion-ios-loop"></i>Tirar dado</button>
-        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Esperar</button>
-
-        <img src="./img/dice-1.png" alt="Dice" class="dice">
-    </div> -->
-
-    <div class="container">
-        <div class="row wrapper">
-            <div class="col s12 l6">
-                <div class="player-0-panel active">
-                    <div class="player-name" id="name-0">Jugador 1</div>
-                    <div class="player-score" id="score-0">43</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Actual</div>
-                        <div class="player-current-score" id="current-0">11</div>
+        <div class="row">
+            <div class="flexbox">
+                <div class="col center-align">
+                    <div class="pigImg">
+                        <img class="responsive-img" src="./img/pig.svg" alt="bpork">
                     </div>
                 </div>
             </div>
-            <div class="col s12 l6">
-                <div class="player-1-panel">
-                    <div class="player-name" id="name-1">Jugador 2</div>
-                    <div class="player-score" id="score-1">72</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Actual</div>
-                        <div class="player-current-score" id="current-1">0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="botones">
-                <button class="btn-new"><i class="ion-ios-plus-outline"></i>Juego nuevo</button>
-                <button class="btn-roll"><i class="ion-ios-loop"></i>Tirar dado</button>
-                <button class="btn-hold"><i class="ion-ios-download-outline"></i>Esperar</button>
-                <img src="./img/dice-1.png" alt="Dice" class="dice">
+        </div>
+        <div class="row">
+            <h5>Presioná el botón flotante para jugar si no querés leer las instrucciones. <i class="ion-arrow-right-c"></i></h5>
+        </div>
+    </div>
+    <div class="container-fluid explicacion z-depth-3 animated fadeInUp delay-1s">
+        <div class="row">
+            <h2 class="animated zoomIn delay-2s">Instrucciones</h2>
+            <div class="container animated slideInLeft delay-2s">
+                <ol class="instrucciones">
+                    <li class=" flow-text">
+                        <span class="itemInstrucciones">Objetivo: </span>Ser el primer jugador en hacer 50
+                        puntos.
+                    </li>
+                    <li class="flow-text">
+                        <span class="itemInstrucciones">Reglas: </span><br>
+                        *En cada turno, cada jugador tira el dado hasta que saca un 1 o el jugador decide plantarse.<br>
+                        *Si saca un 1, el jugardor pierde los puntos conseguidos y tira el turno pasa al siguiente
+                        jugador.<br>
+                        *Si el jugador decide plantarse, suma a su marcador todos los puntos que ha consiguido con el
+                        dado
+                        en ese turno.
+                    </li>
+                    <li class="flow-text">
+                        <span class="itemInstrucciones">Fin del juego: </span> un jugador llega a 50, el juego termina
+                        y el jugador gana.
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
-    <script src="./js/app.js"></script>
+    <div class="flotante">
+        <div class="fixed-action-btn">
+            <a href="./game.html" class="btn-floating btn-large red z-depth-2">
+                <i class="large ion-ios-game-controller-a-outline"></i>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

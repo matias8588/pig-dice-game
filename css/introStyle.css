@@ -1,0 +1,60 @@
+body {
+  background-color: #EB4D4D;
+  font-family: Lato;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 1px 3px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #EB4D4D;
+  text-shadow: 2px 1px 3px;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+}
+
+.pigImg {
+  width: 300px;
+}
+
+.explicacion {
+  background-color: white;
+  padding: 10px;
+}
+
+.instrucciones {
+  font-size: 1.5em;
+}
+
+.titulo {
+  margin: 50px;
+}
+
+.itemInstrucciones {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .pigImg {
+    width: 200px;
+  }
+}
