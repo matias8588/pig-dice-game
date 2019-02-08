@@ -14,7 +14,17 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../img/back.jpg);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,eb4d4d+0,ffffff+100 */
+  background: black;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, black 0%, #eb4d4d 0%, white 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, black 0%, #eb4d4d 0%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, black 0%, #eb4d4d 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
   background-size: cover;
   background-position: center;
   font-family: Lato;

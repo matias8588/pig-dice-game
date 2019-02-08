@@ -40,7 +40,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 document.querySelector('.btn-new').addEventListener('click', init)
 
 /* Funcion para pasar al siguente jugador */
-function nextPlayer() {
+function nextPlayer () {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0
   roundScore = 0
   document.getElementById('current-0').textContent = '0'
@@ -51,7 +51,7 @@ function nextPlayer() {
 }
 
 /* Funcion para inicializar los resultados en 0 */
-function init() {
+function init () {
   gamePlaying = true
   scores = [0, 0]
   activePlayer = 0
